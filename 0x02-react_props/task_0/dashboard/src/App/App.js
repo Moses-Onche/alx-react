@@ -1,23 +1,20 @@
-import './App.css';
-import { getFullYear, getFooterCopy } from './utils.js';
+import React from "react";
+import "./App.css";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import Login from "../Login/Login";
+import Notifications from "../Notifications/Notifications";
 
 function App() {
   return (
-    <div className="App">
-      <div className="App-body">
-        <p>Login to access the full dashboard</p>
-        <form>
-          <label htmlFor="email">Email:</label>
-          <input type="email" name="email"></input>
-          <label htmlFor="password">Password:</label>
-          <input type="password" name="password"></input>
-          <button>OK</button>
-        </form>
+	<React.Fragment>
+	  <Notifications />
+      <div className="App">
+        <Header />
+	    <Footer />
+	    <Login />
       </div>
-      <div className="App-footer">
-        <p>Copyright {getFullYear()} - {getFooterCopy()}</p>
-      </div>
-    </div>
+	</React.Fragment>
   );
 }
 
