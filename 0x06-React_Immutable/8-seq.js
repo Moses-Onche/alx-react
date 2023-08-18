@@ -1,6 +1,6 @@
 import { Seq } from 'immutable';
 
-function printBestStudents (object) {
+export default function printBestStudents (object) {
   const seq = Seq(object);
 
   const filObject = seq.filter((student) => {
@@ -22,5 +22,3 @@ function printBestStudents (object) {
 
   console.log(immutableObj);
 }
-
-export default printBestStudents;
